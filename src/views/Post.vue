@@ -19,7 +19,6 @@ export default {
     return {};
   },
   mounted() {
-    console.log(1)
     this.setPost(this.$route.params.id);
   },
 

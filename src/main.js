@@ -8,7 +8,6 @@ import axios from 'axios'
 Vue.config.productionTip = false;
 axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
   store.dispatch('setPosts', res.data).then(() => {
-    console.log(store)
     new Vue({
       store,
       router,
