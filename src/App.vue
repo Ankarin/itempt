@@ -16,18 +16,12 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  }),
-  mounted() {
-  },
-  methods: {
-    ...mapActions(["setPosts"]),
-  },
+  data: () => ({}),
+  mounted() {},
+  methods: {},
 };
 </script>
 

@@ -17,22 +17,22 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import { mapActions } from "vuex";
 export default {
   props: ["post", "variant", "i"],
 
   data: () => ({}),
   methods: {
     openPost() {
-      this.$router.push(`post/${this.i+1}`);
+      this.$router.push(`post/${this.i + 1}`);
     },
     editPost() {
-      this.$router.push(`/edit-post/${this.i+1}`);
+      this.$router.push(`/edit-post/${this.i + 1}`);
     },
     deleteIt() {
-this.deletePost(this.i)
+      this.deletePost(this.i);
     },
-    ...mapActions(['deletePost'])
+    ...mapActions(["deletePost"]),
   },
 };
 </script>

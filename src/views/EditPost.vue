@@ -1,6 +1,10 @@
 <template>
   <div>
-    <PostForm :edit="true" :selectedPost="selectedPost" :postIt="postIt"></PostForm>
+    <PostForm
+      :edit="true"
+      :selectedPost="selectedPost"
+      :postIt="postIt"
+    ></PostForm>
   </div>
 </template>
 
@@ -19,19 +23,18 @@ export default {
     };
   },
   computed: {
-      selectedPost() {
-let id = this.$route.params.id - 1
-let post = this.posts[id]
-return post
-      },
-     ...mapState(['posts'])
+    selectedPost() {
+      let id = this.$route.params.id - 1;
+      let post = this.posts[id];
+      return post;
+    },
+    ...mapState(["posts"]),
   },
   methods: {
     postIt(post) {
-       
-      this.editPost({post:post,key:this.$route.params.id - 1  });
+      this.editPost({ post: post, key: this.$route.params.id - 1 });
     },
-    ...mapActions(["editPost",]),
+    ...mapActions(["editPost"]),
   },
 };
 </script>

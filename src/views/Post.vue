@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PostComponent :i="$route.params.id-1" v-if="post" :post="post" />
+    <PostComponent :i="$route.params.id - 1" v-if="post" :post="post" />
     <Comments :comments="comments" />
   </div>
 </template>
