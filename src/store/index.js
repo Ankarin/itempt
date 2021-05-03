@@ -45,7 +45,7 @@ export default new Vuex.Store({
           addPost({commit}, post) {
            
             axios.post('https://jsonplaceholder.typicode.com/posts', post).then(res=> {
-              let posts = this.state.posts
+              let posts = Object.assign(this.state.posts)
               let newPost = res.data
               posts.push(newPost)
               commit("setPosts", posts);
